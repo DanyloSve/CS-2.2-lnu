@@ -67,7 +67,7 @@ void MainWindow::on_action_Save_triggered()
     mEditingImg->save(saveImgDir, ".png");
 }
 
-void MainWindow::imageProcessing(int state = 0)
+void MainWindow::imageProcessing(int isGaussBlur = 0)
 {
 
     auto pixCorrector = [](int pix)
@@ -115,7 +115,7 @@ void MainWindow::imageProcessing(int state = 0)
                 }
             }
 
-            if (state == 1)
+            if (isGaussBlur)
             {
                  QColor pixColor(pixCorrector(red / 9), pixCorrector(green / 9),
                                  pixCorrector(blue / 9));
