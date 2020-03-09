@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>download.jpeg</file>
+    </qresource>
+</RCC>
